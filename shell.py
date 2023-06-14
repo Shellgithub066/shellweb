@@ -53,12 +53,5 @@ except ValueError:
     st.info("Lütfen csv dosyasını giriniz.", icon="🚨")
 
 
-data = df(70)
-
-x = df["ÖTV"]
-y = df["ÖTV Oranı"]
-t = df["Tarih"]
-
-
 
 
