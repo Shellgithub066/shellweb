@@ -33,25 +33,21 @@ st.header('Single File Upload')
 uploaded_file = st.file_uploader('Upload a file')
 
 df = pd.read_csv(uploaded_file)
-try:
-    
-
-
-    st.write(df)
-    
-
-    df = pd.read_csv(uploaded_file)
-
-    data = df(70)
 
     
 
 
-  
-   
-except ValueError:
-    st.info("Lütfen csv dosyasını giriniz.", icon="🚨")
+st.write(df)
+    
 
+df = pd.read_csv(uploaded_file)
+
+data = df(70)
+
+    
+
+
+ 
 
 
 
