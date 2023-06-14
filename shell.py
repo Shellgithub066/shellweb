@@ -1,11 +1,6 @@
 import streamlit as st
 import pandas as pd 
-import plotly.figure_factory as ff
-import seaborn as sns
-import matplotlib.pyplot as plt
-import numpy as np
-from bokeh.plotting import figure
-import altair as alt
+
 
 st.set_page_config(
     page_title="Shell Veri uygulaması",
@@ -33,21 +28,24 @@ st.header('Single File Upload')
 uploaded_file = st.file_uploader('Upload a file')
 
 df = pd.read_csv(uploaded_file)
-
+try:
     
 
 
-st.write(df)
+    st.write(df)
     
 
-df = pd.read_csv(uploaded_file)
+    df = pd.read_csv(uploaded_file)
 
-data = df(70)
+    data = df(70)
 
     
+except ValueError:
+    st.info("Lütfen csv dosyasını giriniz.", icon="🚨")
 
 
- 
+
+
 
 
 
